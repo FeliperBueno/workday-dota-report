@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Page Layouts - Workday Dota Dashboard
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   App Layout
+   -------------------------------------------------------------------------- */
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: var(--space-8);
+    background: var(--bg-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Page Header
+   -------------------------------------------------------------------------- */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-8);
+}
+
+.page-title {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+}
+
+.page-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Dashboard Page
+   -------------------------------------------------------------------------- */
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.dashboard-recent {
+    margin-top: var(--space-8);
+}
+
+/* --------------------------------------------------------------------------
+   Matches Page
+   -------------------------------------------------------------------------- */
+.matches-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+}
+
+.matches-search {
+    flex: 1;
+    max-width: 400px;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   Match Detail Page
+   -------------------------------------------------------------------------- */
+.match-detail {
+    max-width: 1200px;
+}
+
+.match-detail .back-link {
+    margin-bottom: var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 1400px) {
+    .dashboard-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform var(--transition-base);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: var(--space-4);
+    }
+
+    .match-row {
+        grid-template-columns: auto 1fr auto auto;
+    }
+
+    .match-duration,
+    .match-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .matches-filters {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .matches-search {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .match-header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Dashboard analítico para acompanhar performance no Dota 2 durante horário comercial">
+  
+  <title>ezDota - Dashboard</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2300d4aa' rx='20' width='100' height='100'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='45' font-weight='bold' font-family='sans-serif'>ez</text></svg>">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <div id="sidebar-container"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- Content rendered by JavaScript -->
+      <div class="flex items-center justify-center min-h-screen">
+        <div class="text-center">
+          <div class="spinner" style="margin: 0 auto 16px;"></div>
+          <p class="text-secondary">Carregando...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- App Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
